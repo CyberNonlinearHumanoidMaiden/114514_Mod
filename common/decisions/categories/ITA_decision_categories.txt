@@ -1,0 +1,29 @@
+################
+#### ITALY  ####
+################
+
+
+ITA_grind = {
+	
+	allowed = {
+		original_tag = ITA
+	}
+	
+	visible = {
+		
+	}	
+}
+
+ITA_ww2 = {
+	
+	allowed = {
+		original_tag = ITA
+	}
+	
+	visible = {
+		OR = {
+			GER = { has_war_with = FRA }
+			GER = { has_war_with = ENG }
+		}
+	}	
+}

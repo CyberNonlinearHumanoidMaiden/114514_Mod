@@ -1,0 +1,124 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_game_rule_allow_subs"
+		texturefile = "gfx/interface/traits/trait_admiral_lone_wolf.dds"
+	}
+
+	spriteType = {
+		name = "GFX_game_rule_allow_strats"
+		texturefile = "gfx/interface/traits/personal/trait_aviation_enthusiast.dds"
+	}
+
+	spriteType = {
+		name = "GFX_game_rule_allow_vichy"
+		texturefile = "gfx/game_rules/allow_vichy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_game_rule_spr_annex"
+		texturefile = "gfx/interface/decisions/decision_oppression.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_game_rule_ger_irq"
+		texturefile = "gfx/interface/decisions/decision_ger_reichskommissariats.dds"
+	}
+
+	spriteType = {
+		name = "GFX_game_rule_ita_grind"
+		texturefile = "gfx/interface/decisions/decision_generic_military.dds"
+	}
+
+	spriteType = {
+		name = "GFX_game_rule_allow_nukes"
+		texturefile = "gfx/game_rules/allow_nukes.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_game_rule_sov_mech"
+		texturefile = "gfx/game_rules/SOV_mechanized_equipment_1.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_trait_expert_improviser_passiv"
+		texturefile = "gfx/interface/traits/trait_improvisation_expert.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_adaptable_nerfed"
+		texturefile = "gfx/interface/traits/trait_adaptable.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_trait_gigachad"
+		texturefile = "gfx/interface/traits/trait_operative_commando.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_chief"
+		texturefile = "gfx/interface/traits/personal/trait_cautious.dds"
+	}	
+
+	SpriteType = {		
+		name ="GFX_start_date_hmm"
+		texturefile = "gfx/interface/select_date_hmm.dds"
+	}
+
+	SpriteType = {
+		name ="GFX_idea_forced_closed_eco"
+		texturefile= "gfx/interface/ideas/idea_ger_the_great_red_menace.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_forced_free_trade"
+		texturefile = "gfx/interface/ideas/idea_generic_free_trade.dds"
+	}	
+
+	SpriteType = {
+		name ="GFX_idea_sf_double"
+		texturefile = "gfx/interface/ideas/idea_eng_special_air_service.dds"
+	}
+
+	SpriteType = {
+		
+		name ="GFX_idea_hmm_neutral"
+		texturefile = "gfx/interface/ideas/neutrality_idea.dds"
+	}	
+
+	SpriteType = {
+		
+		name ="GFX_idea_spa_volunteers"
+		texturefile = "gfx/interface/ideas/idea_generic_reserve_divisions.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_condor_legion"
+		texturefile = "gfx/interface/ideas/idea_generic_reserve_divisions.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_sf_minor"
+		texturefile = "gfx/interface/ideas/idea_eng_special_air_service.dds"		
+	}
+
+	SpriteType = {
+		name = "GFX_idea_no_vol"
+		texturefile = "gfx/interface/ideas/generic_volunteer_expedition_bonus.dds"		
+	}
+
+	SpriteType = {
+		name = "GFX_idea_no_join"
+		texturefile = "gfx/game_rules/leave_faction.dds"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_hmm_jap_oil"
+		texturefile = "gfx/interface/ideas/idea_jap_the_unthinkable_option.dds"		
+	}
+
+	SpriteType = {
+		name = "GFX_idea_hmm_jap_oil_2"
+		texturefile = "gfx/interface/ideas/idea_jap_the_unthinkable_option.dds"		
+	}	
+}	

@@ -1,0 +1,48 @@
+TUR_historical_plan = {
+	name = "Turkey Historical Plan"
+	desc = "Turkey will pursue neutrality for as long as possible, and then join the Allies."
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			is_historical_focus_on = yes
+			is_historical_focus_on = no
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+	
+		industrial_effort
+		construction_effort
+		construction_effort_2
+		infrastructure_effort
+		construction_effort_3		
+		infrastructure_effort_2
+		production_effort
+		production_effort_2
+		production_effort_3	
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		industry = 50.0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

@@ -1,0 +1,26 @@
+CAN_hmm =
+{
+	CAN_hmm_annex_SAF
+	{
+		icon = generic_army_support
+
+		available = {
+			any_other_country = {
+				original_tag = SAF
+				exists = yes
+			}
+			SAF = { is_ai = yes } 
+		}
+		
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+			annex_country = { target = SAF }
+			add_state_core = 719
+			add_state_core = 275
+			add_state_core = 681
+			add_state_core = 541
+		}
+	}
+}

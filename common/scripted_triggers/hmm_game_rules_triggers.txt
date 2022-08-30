@@ -1,0 +1,218 @@
+# Triggers for Lobby Rules
+
+are_mines_enabled = {
+  has_dlc = "Man the Guns"
+  has_game_rule = {
+    rule = HMM_ALLOW_MINES
+    option = HMM_MINES_FREE
+  }
+}
+
+are_f3s_enabled = {
+	has_game_rule = {
+		rule = HMM_ALLOW_FIGHTER
+		option = HMM_FREE_FIGHTER3
+	}
+}
+
+are_strats_enabled = {
+	OR = {
+		has_game_rule = {
+			rule = HMM_ALLOW_STRATS
+			option = HMM_FREE_STRATS
+		}
+		has_game_rule = {
+			rule = HMM_ALLOW_STRATS
+			option = HMM_STRAT_1s
+		}
+		has_game_rule = {
+			rule = HMM_ALLOW_STRATS
+			option = HMM_STRAT_2s
+		}
+	}
+}
+
+are_strat2_enabled = {
+	OR = {
+		has_game_rule = {
+			rule = HMM_ALLOW_STRATS
+			option = HMM_FREE_STRATS
+		}
+		has_game_rule = {
+			rule = HMM_ALLOW_STRATS
+			option = HMM_STRAT_2s
+		}
+	}	
+}
+
+are_strat3_enabled = {
+	has_game_rule = {
+		rule = HMM_ALLOW_STRATS
+		option = HMM_FREE_STRATS
+	}
+	NOT = {
+		has_game_rule = {
+			rule = HMM_ALLOW_STRATS
+			option = HMM_STRAT_2s
+		}	
+	}
+}
+
+are_moderns_enabled = {
+	has_game_rule = {
+		rule = HMM_ALLOW_MODERNS
+		option = HMM_FREE_MODERNS
+	}
+}
+
+are_subs3_enabled = {
+	NOT = {
+		has_game_rule = {
+			rule = HMM_ALLOW_SUBS
+			option = HMM_SUBS3_BANNED
+		}		
+	}	
+}	
+
+are_subs4_enabled = {
+	has_game_rule = {
+		rule = HMM_ALLOW_SUBS
+		option = HMM_FREE_SUBS
+	}
+}
+
+is_ibps_enabled = {
+	has_game_rule = {
+		rule = HMM_IBPS
+		option = HMM_IBPS_VANILLA
+	}
+}
+
+is_ibps_100_enabled = 	{
+	always = no
+#	has_game_rule = {
+#		rule = HMM_IBPS
+#		option = HMM_IBPS_RULESET
+#	}
+}
+
+# swapped so that 100% rule apllies on vanilla setting just reswapp if want 2 add 3rd option again
+is_tbps_enabled = {
+#	has_game_rule = {
+#		rule   = HMM_TBPS
+#		option = HMM_TBPS_RULESET
+#	}
+	always = no
+}
+
+is_tbps_100_enabled = 	{
+	has_game_rule = {
+		rule = HMM_TBPS
+		option = HMM_TBPS_VANILLA
+	}	
+}
+# end of swap
+are_nukes_enabled = {
+	has_game_rule = {
+		rule   = HMM_ALLOW_NUKES
+		option = HMM_FREE_NUKES
+	}
+}	
+
+is_spr_por_allowed = {
+	has_game_rule = {
+		rule   = HMM_SPR_ANNEX
+		option = HMM_SPR_ANNEX_DOIT
+	}
+}
+
+#is_spr_tung_allowed = {
+#	has_game_rule = {
+#		rule   = HMM_SPR_ANNEX
+#		option = HMM_SPR_ANNEX_TUNGIT
+#	}
+#}
+
+is_spr_vets_allowed = {
+	has_game_rule = {
+		rule   = HMM_SPR_VETS
+		option = HMM_SPR_VETS_YES
+	}
+}
+
+#is_collab_allowed = {
+#	has_game_rule = {
+#		rule   = HMM_ALLOW_COLLAB
+#		option = HMM_COLLAB_YES
+#	}
+#}
+
+is_tech_stealing_banned = {
+	has_game_rule = {
+		rule   = HMM_TBPS
+		option = HMM_TBPS_BANNED
+	}
+}
+
+are_tanks_nerfed = {
+	has_game_rule = {
+		rule   = HMM_TANK_NERF
+		option = HMM_TANK_NERF_YES
+	}
+}
+
+is_airprod_alowed = {
+	has_game_rule = {
+		rule = HMM_AIR_PROD
+		option = HMM_AIR_PROD_YES
+	}
+}
+
+is_adaptable_barb = {
+	has_game_rule = {
+		rule = HMM_ADAPTABLE_BARB
+		option = HMM_ADAPTABLE_BARB_YES
+	}
+}
+
+is_adaptable_nerfed = {
+	has_game_rule = {
+		rule = HMM_ADAPTABLE_BARB
+		option = HMM_ADAPTABLE_BARB_NERFED
+	}
+}
+
+is_sov_mech_enabled = {
+	has_game_rule = {
+		rule = HMM_SOV_MECH
+		option = HMM_SOV_MECH_YES
+	}
+}	
+	
+is_sov_mech_nerfed = {
+	has_game_rule = {
+		rule = HMM_SOV_MECH
+		option = HMM_SOV_MECH_NERF
+	}	
+}
+
+#are_dozers_enabled = {
+#	has_game_rule = {
+#		rule = HMM_ALLOW_DOZER
+#		option = HMM_DOZER_YES
+#	}
+#}
+
+are_collabs_allowed = {
+	has_game_rule = {
+		rule = HMM_ALLOW_COLLAB
+		option = HMM_FREE_COLLAB
+	}
+}
+
+is_amDrive_enabled = {
+	has_game_rule = {
+		rule = HMM_ALLOW_AMDRIVE
+		option = HMM_AMDRIVE_YES
+	}			
+}

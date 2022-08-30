@@ -1,0 +1,20 @@
+
+state={
+	id=490
+	name="STATE_490"
+	manpower = 1
+	
+	state_category = pastoral
+
+	history={
+		owner = WST
+
+		add_core_of = WST
+	}
+
+	provinces={
+		8149 10942 
+	}
+
+	local_supplies=6.0 
+}

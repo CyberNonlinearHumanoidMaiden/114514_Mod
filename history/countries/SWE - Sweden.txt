@@ -1,0 +1,81 @@
+﻿capital = 141	
+
+oob = "SWE_1936"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "SWE_1936_naval_mtg"
+	else = {
+		set_naval_oob = "SWE_1936_naval_legacy"
+	}
+}
+
+set_research_slots = 3
+
+add_ideas = {
+	en_svensk_tiger
+	neutrality_idea
+	forced_free_trade
+	hmm_neutral
+}
+
+set_stability = 0.9
+set_war_support = 0.1
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	CAS1 = 1
+	early_fighter = 1
+	naval_bomber1 = 1
+	cv_naval_bomber1 = 1
+	early_bomber = 1
+	basic_train = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.9.18"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 75
+	neutrality = 14
+	communism = 8
+	fascism = 3
+}
+
+set_convoys = 25
+set_stability = 0.9
+
+
+recruit_character = SWE_per_albin_hansson
+recruit_character = SWE_sven_olov_lindholm
+recruit_character = SWE_sven_linderot
+recruit_character = SWE_axel_pehrssonbramstorp
+recruit_character = SWE_folke_hogberg
+recruit_character = SWE_erik_af_edholm
+recruit_character = SWE_claes_lindstrom
+recruit_character = SWE_per_sylvan
+recruit_character = SWE_gosta_ehrensvard
+recruit_character = SWE_torsten_friis
+recruit_character = SWE_erik_palmstierna
+recruit_character = SWE_helge_stromback
+recruit_character = SWE_helge_jung
+recruit_character = SWE_olof_thornell
+recruit_character = SWE_bengt_nordenskiold
+recruit_character = SWE_ivar_holmquist
+recruit_character = SWE_fabian_tamm
+recruit_character = SWE_charles_de_champs
+recruit_character = SWE_axel_rappe
+recruit_character = SWE_oscar_nygren
+recruit_character = SWE_axel_ljungdahl
+recruit_character = SWE_archibald_douglas
+recruit_character = SWE_ernst_wigforss
+recruit_character = SWE_thorwald_bergquist
+recruit_character = SWE_osten_unden

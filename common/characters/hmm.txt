@@ -1,0 +1,210 @@
+characters={
+
+	### Germany 
+	
+	HMM_heinz_guderian={
+		name=GER_heinz_guderian
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Heinz_Guderian.dds"
+				small="GFX_idea_heinz_guderian"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = heinz_guderian
+			ledger = army
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				blitzkrieg_theorist
+			}
+		}
+		
+		corps_commander={
+			traits={ career_officer trickster brilliant_strategist panzer_leader trait_engineer ranger }
+			skill=6
+			attack_skill=4
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=5
+			legacy_id=495
+		}
+	}
+	
+	HMM_erich_von_manstein={
+		name=GER_erich_von_manstein
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Erich_von_Manstein.dds"
+				small="GFX_idea_manstein"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = manstein
+			ledger = army
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				military_theorist
+			}
+		}
+		
+		corps_commander={
+			traits={ organizer trickster brilliant_strategist panzer_leader trait_engineer ranger }
+			skill=6
+			attack_skill=4
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=5
+			legacy_id=494
+		}
+	}	
+	
+	HMM_wilhelm_list={
+		name=GER_wilhelm_list
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Wilhelm_List.dds"
+				small="gfx/interface/ideas/idea_GER_wilhelm_list.dds"
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist career_officer infantry_leader skilled_staffer organizer}
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=496
+		}
+	}	
+	
+	### Soviet
+	
+	HMM_konstantin_rokossovsky = {
+		name = SOV_konstantin_rokossovsky
+
+		portraits = {
+			army = {
+				small = "GFX_idea_konstantin_rokossovsky"
+				large = "gfx/leaders/SOV/Portrait_Soviet_Konstantin_Rokossovsky.dds"
+			}
+		}
+
+		corps_commander = {
+			traits = { organizer trickster brilliant_strategist panzer_leader trait_engineer ranger }
+			skill = 6
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 5
+			legacy_id = 498
+			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = konstantin_rokossovsky
+			ledger = army
+			allowed = {
+				original_tag = SOV
+				hidden_trigger = {
+					NOT = {
+						any_other_country = {
+							has_war_with = SOV
+							original_tag = SOV
+							has_unit_leader = 403.000
+						}
+					}
+				}
+			}
+			available = {
+				has_completed_focus = SOV_positive_heroism
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				army_armored_3
+			}
+				cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	HMM_georgy_zhukov = {
+		name = SOV_georgy_zhukov
+
+		portraits = {
+			army = {
+				small = "GFX_idea_georgy_zhukov"
+				large = "gfx/leaders/SOV/Portrait_Soviet_Gregory_Zhukov.dds"
+			}
+		}
+
+		corps_commander = {
+			traits = { winter_specialist trickster panzer_leader trait_engineer ranger }
+			skill = 6
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 5
+			legacy_id = 497
+			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+		}
+
+		advisor = {
+			cost = 150
+			slot = theorist
+			idea_token = georgy_zhukov
+			ledger = army
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_completed_focus = SOV_positive_heroism
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				mass_assault_expert
+			}
+		}		
+	}
+
+	HMM_vasily_kuznetsov = {
+		name = SOV_vasily_kuznetsov
+		portraits = {
+			army = {
+				large = "GFX_portrait_SOV_vasily_kuznetsov"
+				small= "GFX_idea_SOV_vasily_kuznetsov"
+			}
+		}
+		corps_commander = {
+			traits = { commando infantry_leader skilled_staffer organizer }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 499
+			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+		}
+	}	
+
+}

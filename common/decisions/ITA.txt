@@ -1,0 +1,88 @@
+ITA_grind = {
+	ITA_grind_ethiopia = {
+
+		icon = generic_army_support
+
+		available = {
+			not = {has_war_with = ETH}
+		}
+		
+		activation = {
+			has_war_with = ETH
+			has_game_rule = {
+				rule   = HMM_ITA_GRIND
+				option = HMM_ITA_6MONTH
+			}			
+		}
+		
+		is_good = yes
+		days_mission_timeout = 169
+
+		timeout_effect = {
+			country_event = { id = italy.17 }
+		}
+		
+		complete_effect = {
+		
+			army_experience = 1
+		}
+	}
+
+
+	ITA_iraq_oil = {
+	
+		icon = generic_army_support
+
+		available = {
+			ITA  = { 	
+				has_full_control_of_state = 453 
+				has_full_control_of_state = 447 
+				has_full_control_of_state = 446 
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+			ENG = {
+				remove_resource_rights = 676
+				remove_resource_rights = 291
+			}
+			IRQ = {
+			give_resource_rights = { receiver = ITA state = 676 }
+			give_resource_rights = { receiver = ITA state = 291 }
+			}
+		}
+	}	
+	
+	ITA_annex_BUL = {
+
+		icon = generic_army_support
+
+		available = {
+			any_other_country = {
+				original_tag = BUL
+				exists = yes
+			}
+			BUL = { is_ai = yes }	
+			BUL = { 
+						is_in_faction_with = ITA
+				}
+		}
+		
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+			annex_country = { target = BUL }
+			every_state = {
+				limit = {
+					is_core_of = BUL
+					is_controlled_by = ITA
+					}
+				set_compliance = 100
+			}			
+		}
+	}	
+}

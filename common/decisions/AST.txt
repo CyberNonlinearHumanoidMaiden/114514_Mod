@@ -1,0 +1,24 @@
+AST_hmm =
+{
+	AST_hmm_annex_NZL
+	{
+		icon = generic_army_support
+
+		available = {
+			any_other_country = {
+				original_tag = NZL
+				exists = yes
+			}
+			NZL = { is_ai = yes } 
+		}
+		
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+			annex_country = { target = NZL }
+			add_state_core = 723
+			add_state_core = 284
+		}
+	}
+}

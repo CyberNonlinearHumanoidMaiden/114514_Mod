@@ -1,0 +1,45 @@
+CHI_nationalist_historical_plan = {
+	name = "Nationalist China historical plan"
+	desc = "Essentially historical behavior for Nationalist China"
+
+	allowed = {
+		original_tag = CHI
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	ai_national_focuses = {
+		industrial_effort
+		construction_effort
+		construction_effort_2
+		infrastructure_effort
+		construction_effort_3		
+		infrastructure_effort_2
+		production_effort
+		production_effort_2
+		production_effort_3	
+		naval_effort
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		CHI_soong_mei_ling = 10
+		CHI_bo_yibo = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

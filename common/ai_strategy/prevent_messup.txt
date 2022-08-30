@@ -1,0 +1,58 @@
+hmm_prevent_messup = {
+	enable = {
+			OR = {
+				original_tag = POL
+				original_tag = NOR
+				original_tag = DEN
+				original_tag = LUX
+				original_tag = HOL
+				original_tag = BEL
+				original_tag = INS	
+			}
+		}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -300
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = -300
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = -300
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = naval_bomber
+		value = -300
+	}	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = -300
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -300
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = interceptor
+		value = -300
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = suicide
+		value = -300
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = air_transport
+		value = -300
+	}	
+}	

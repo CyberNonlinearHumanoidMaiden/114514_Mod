@@ -1,0 +1,812 @@
+
+
+ENG_imperial_conference_decision = {
+	
+	ENG_imperial_conference_decision = {
+
+		icon = generic_political_discourse
+		
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 60
+
+		fire_only_once = yes
+
+		activation = {
+			tag = ENG
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		visible = {
+			tag = ENG
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		cancel_if_not_visible = no
+
+		is_good = yes
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = imperial_conference_ends_tt
+			every_country = {
+				limit = {
+					OR = {
+						AND = {
+							is_subject_of = ENG
+							tag = CAN
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = SAF
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = RAJ
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = AST
+						}
+						AND = {
+							is_subject_of = ENG
+							tag = NZL
+						}
+					}
+				}
+				remove_opinion_modifier = { target = ENG modifier = ENG_imperial_conference_opinion }
+				remove_opinion_modifier = { target = ENG modifier = ENG_imperial_conference_approved_resolution }
+			}
+		}
+	}
+	
+	ENG_discuss_imperial_defense = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_imperial_conference
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		complete_effect = {
+			country_event = { id = mtg_britain.83 hours = 6 }
+			set_country_flag = ENG_imperial_conference_discussion_in_progress
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_discuss_imperial_trade = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_imperial_conference
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		complete_effect = {
+			country_event = { id = mtg_britain.87 hours = 6 }
+			set_country_flag = ENG_imperial_conference_discussion_in_progress
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_discuss_imperial_economy = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_imperial_conference
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		complete_effect = {
+			country_event = { id = mtg_britain.91 hours = 6 }
+			set_country_flag = ENG_imperial_conference_discussion_in_progress
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_discuss_appeasement = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
+			has_war = no
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_imperial_conference
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		complete_effect = {
+			country_event = { id = mtg_britain.95 hours = 6 }
+			set_country_flag = ENG_imperial_conference_discussion_in_progress
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	ENG_discuss_imperial_federation = {
+
+		icon = eng_imperial_federation
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
+			OR = {
+				CAN = { exists = yes }
+				SAF = { exists = yes }
+				AST = { exists = yes }
+				NZL = { exists = yes }
+				AND = {
+					RAJ = { is_subject_of = ENG }
+					has_completed_focus = ENG_indian_autonomy
+				}
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ENG_imperial_conference
+			has_country_flag = ENG_imperial_conference_timer_flag
+		}
+
+		complete_effect = {
+			country_event = { id = mtg_britain.99 hours = 6 }
+			set_country_flag = ENG_imperial_conference_discussion_in_progress
+			if = {
+				limit = {
+					NOT = { has_completed_focus = ENG_indian_autonomy }
+				}
+				custom_effect_tooltip = ENG_indian_autonomy_tt
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+
+political_actions = {
+	hold_blood_toil_tears_sweat_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+			has_war_with = GER
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_leader = {{ ruling_only = yes character = ENG_winston_churchill }
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			if = {
+				limit = {
+					USA = {
+						exists = yes
+						has_war = no
+						has_government = ROOT
+					}
+				}
+				USA = { set_country_flag = blood_toil_tears_sweat_speech }
+			}
+			set_country_flag = blood_toil_tears_sweat_speech
+			play_blood_toil_tears_sweat_effect = yes
+		}
+
+		ai_will_do = {
+			factor = 200 #Gotta allow the Americans to help
+		}
+	}
+
+	hold_fight_on_the_beaches_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+			has_war_with = GER
+			is_in_faction_with = FRA
+			FRA = {
+				surrender_progress > 0.2
+			}
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_flag = blood_toil_tears_sweat_speech
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			if = {
+				limit = {
+					USA = {
+						exists = yes
+						has_war = no
+						has_government = ROOT
+					}
+				}
+				USA = { set_country_flag = fight_on_the_beaches_speech }
+			}
+			set_country_flag = fight_on_the_beaches_speech
+			play_we_shall_fight_on_the_beaches_effect = yes
+		}
+
+		ai_will_do = {
+			factor = 200 #Gotta allow the Americans to help
+		}
+	}
+
+	hold_this_was_their_finest_hour_speech = {
+
+		icon = generic_political_discourse
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			has_government = democratic
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+			has_war_with = GER
+			is_in_faction_with = FRA
+			FRA = { has_capitulated = yes }
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			has_country_flag = fight_on_the_beaches_speech
+			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			if = {
+				limit = {
+					USA = {
+						exists = yes
+						has_war = no
+						has_government = ROOT
+					}
+				}
+				USA = { set_country_flag = this_was_their_finest_hour_speech }
+			}
+			set_country_flag = this_was_their_finest_hour_speech
+			play_their_finest_hour_effect = yes
+		}
+
+		ai_will_do = {
+			factor = 200 #Gotta allow the Americans to help
+		}
+	}
+
+	macdonald_proposal = {
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			IRE = { exists = yes }
+			NOT = { is_in_faction_with = IRE }
+			FRA = { has_capitulated = yes }
+			is_in_faction_with = FRA
+		}
+
+		cost = 25
+		
+		visible = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			IRE = { exists = yes }
+		}
+		
+		complete_effect = {
+			IRE = { country_event = { id = wtt_britain.24 } }
+			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ENG_abdication_crisis = { # timer for the player to see when the event chain ends
+
+		priority = 10
+
+		icon = eng_abdication_crisis
+		
+		available = {
+			has_country_flag = ENG_abdication_crisis_changed_mind
+		}
+
+		days_mission_timeout = 200
+
+		fire_only_once = yes
+
+		activation = {
+			tag = ENG
+			OR = {
+				has_country_flag = ENG_abdication_crisis_normal_marriage
+				has_country_flag = ENG_abdication_crisis_morganatic_marriage
+			}
+		}
+
+		visible = {
+			tag = ENG
+			NOT = {
+				has_country_flag = ENG_edward_viii_abdicated
+				has_country_flag = edward_viii_married_wallis_simpson
+			}
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = yes
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			country_event = { id = mtg_britain.5 }
+		}
+	}
+
+}
+
+operations = {
+	
+	invade_ireland = {
+
+		icon = generic_operation
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			IRE = { exists = yes }
+			FRA = { has_capitulated = yes }
+			is_in_faction_with = FRA
+		}
+
+		cost = 50
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 100
+				any_enemy_country = {
+					has_attache_from = IRE
+				}
+			}
+			modifier = {
+				add = 1
+				has_opinion = { target = IRE value < -50 }
+			}
+			modifier = {
+				add = 1
+				IRE = { has_added_tension_amount > 0.05 }
+			}
+		}
+		
+		visible = {
+			tag = ENG
+			has_war_with = GER
+			IRE = { exists = yes }
+		}
+		
+		complete_effect = {
+			set_autonomy = { target = IRE autonomy_state = autonomy_puppet }
+		}
+	}
+
+	mers_el_kebir_raid = {
+
+		icon = generic_naval
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+			has_government = democratic
+			has_war_with = GER
+			any_country_with_original_tag = {
+				original_tag_to_check = FRA
+				has_government = fascism
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		visible = {
+			has_country_leader = { ruling_only = yes name = "Winston Churchill" }
+			tag = ENG
+			has_government = democratic
+			has_war_with = GER
+			OR = {
+				AND = {
+					is_in_faction_with = FRA
+					FRA = { surrender_progress > 0.2 }
+				}
+				any_country_with_original_tag = {
+					original_tag_to_check = FRA
+					has_government = fascism
+				}
+			}
+		}
+		
+		complete_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = FRA
+					has_government = fascism
+				}
+				country_event = { id = wtt_britain.25 hours = 5 }
+			}
+		}
+	}
+}
+ENG_move_to_secure_the_dominions = {
+
+	ENG_propaganda_campaigns_in_canada = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			tag = ENG
+		}
+
+		available = {
+			NOT = { army_manpower_in_state = { state = 467 amount < 9600 } }
+			NOT = { army_manpower_in_state = { state = 469 amount < 9600 } }
+			NOT = { army_manpower_in_state = { state = 470 amount < 9600 } }
+			NOT = { army_manpower_in_state = { state = 473 amount < 9600 } }
+			NOT = { army_manpower_in_state = { state = 465 amount < 9600 } }
+			NOT = { army_manpower_in_state = { state = 464 amount < 9600 } }
+			NOT = { army_manpower_in_state = { state = 468 amount < 28800 } }
+			NOT = { army_manpower_in_state = { state = 276 amount < 48000 } }
+			FROM = { has_country_flag = ENG_cannot_leave_faction }
+		}
+
+		targets = { CAN }
+		targets_dynamic = yes
+
+		target_root_trigger = {
+			has_completed_focus = ENG_move_to_secure_the_dominions
+		}
+
+		target_trigger = {
+			FROM = {
+				original_tag = CAN
+			}
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		days_remove = 90
+
+		visible = {
+			OR = {
+				has_government = communism
+				has_government = fascism
+			}
+			has_completed_focus = ENG_move_to_secure_the_dominions
+			NOT = { has_country_flag = ENG_secure_the_dominions_backed_down_against_USA }
+			FROM = {
+				is_subject_of = ROOT
+				NOT = { has_country_flag = ENG_imperialist_civil_war }
+				NOT = { has_government = ROOT }
+			}
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				FROM = { add_timed_idea = { idea = ENG_dominion_fascist_propaganda days = 90 } }
+			}
+			else_if = {
+				limit = {
+					has_government = communism
+				}
+				FROM = { add_timed_idea = { idea = ENG_dominion_communist_propaganda days = 90 } }
+			}
+			FROM = { country_event = { id = mtg_britain.64 } }
+		}
+
+		remove_effect = {
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}	
+
+ENG_hmm = {
+	
+	#ENG_hmm_suriname = {
+	#	
+	#	icon = aluminium
+	#	
+	#	available = {
+	#		GER = { exists = no }
+	#	}
+	#	
+	#	activation = {
+	#		AND = {
+	#			HOL = { has_capitulated = yes }
+	#			ENG = { has_war_with = GER }
+	#		}
+	#	}
+	#	
+	#	is_good = yes
+	#	days_mission_timeout = 3
+	#	fire_only_once = yes
+	#	
+	#	timeout_effect = {
+	#		transfer_state = 309
+	#		309 = { set_compliance = 70 }		
+	#	}
+	#	complete_effect = {
+	#		transfer_state = 309
+	#		309 = { set_compliance = 70 }
+	#	}
+	#}
+	
+	ENG_annex_CAN = {
+
+		icon = generic_army_support
+
+		available = {
+			any_other_country = {
+				original_tag = CAN
+				exists = yes
+			}
+			CAN = { is_ai = yes }	
+			has_war_with = GER
+			CAN = { 
+				is_in_faction_with = ENG 
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+			annex_country = { target = CAN }
+			every_state = {
+				limit = {
+					is_core_of = CAN
+					is_controlled_by = ENG
+					}
+				set_compliance = 100
+			}			
+		}
+	}	
+
+	ENG_annex_SAF = {
+	
+		icon = generic_army_support
+
+		available = {
+			any_other_country = {
+				original_tag = SAF
+				exists = yes
+			}
+			SAF = { is_ai = yes }	
+			has_war_with = GER
+			SAF = { 
+				is_in_faction_with = ENG 
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+			annex_country = { target = SAF }
+			every_state = {
+				limit = {
+					is_core_of = SAF
+					is_controlled_by = ENG
+					}
+				set_compliance = 100
+			}			
+		}
+	}
+
+	ENG_annex_AST = {
+	
+		icon = generic_army_support
+
+		available = {
+			any_other_country = {
+				original_tag = AST
+				exists = yes
+			}
+			AST = { is_ai = yes }	
+			has_war_with = JAP
+			AST = { 
+				is_in_faction_with = ENG 
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+			annex_country = { target = AST }
+			every_state = {
+				limit = {
+					is_core_of = AST
+					is_controlled_by = ENG
+					}
+				set_compliance = 100
+			}			
+		}
+	}
+
+	ENG_annex_NZL = {
+	
+		icon = generic_army_support
+
+		available = {
+			any_other_country = {
+				original_tag = NZL
+				exists = yes
+			}
+			NZL = { is_ai = yes }	
+			has_war_with = JAP
+			NZL = { 
+				is_in_faction_with = ENG 
+			}
+		}
+		
+		fire_only_once = yes
+		days_remove    = -1
+		
+		complete_effect = {
+			annex_country = { target = NZL }
+			every_state = {
+				limit = {
+					is_core_of = NZL
+					is_controlled_by = ENG
+					}
+				set_compliance = 100
+			}			
+		}
+	}
+}
