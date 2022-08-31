@@ -24,6 +24,10 @@ NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 5.0;       -- XP cost fo
 NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST = 3.0;        -- XP cost for converting one equipment module to a related module when creating an equipment variant.
 NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST = 1.0;        -- XP cost for removing an equipment module and leaving the slot empty when creating an equipment variant.
 
+NDefines.NCountry.REINFORCEMENT_DELIVERY_SPEED_MIN = 0.3,			-- The distance from the supply region to capital should affect the speed only a little bit. Main factor for penalty is overcrowded areas, and not the route length.
+NDefines.NCountry.REINFORCEMENT_EQUIPMENT_DELIVERY_SPEED = 0.15,	-- Modifier for army equipment reinforcement speed
+NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 20.0,	-- Modifier for army manpower reinforcement delivery speed (travel time)
+
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_BASE = 100;
 
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROLLED = 0;
